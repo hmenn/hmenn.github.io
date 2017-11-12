@@ -7,6 +7,11 @@
     ```
     Go Interfacing section and enable Serial.
 
+* Disable bluetooth to use uart pins
+    ```
+    dtoverlay=pi3-miniuart-bt
+    ```
+
 * Update /boot/cmdline.txt file to use UART for shield. Delete ttyS0/ttyAMA0 text.
     ```
     dwc_otg.lpm_enable=0  console=tty1 console=serial0,115200 root=PARTUUID=2d6ee0c4-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles enable_uart=1
