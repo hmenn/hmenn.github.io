@@ -1,4 +1,5 @@
 theme: jekyll-theme-architect
 title: Dev-notes
+description: Hasan Men
 plugins:
     - jekyll-gist
