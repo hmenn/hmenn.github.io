@@ -7,9 +7,14 @@
     ```
     Go Interfacing section and enable Serial.
 
-* Disable bluetooth to use uart pins
+* Disable or change bluetooth uart bus to use uart pins. Add dtoverlay settings to config file.
+    ```
+    sudo nano /boot/configs.txt
+    ```
+    Disable or change to miniuart.(Please add one of these)
     ```
     dtoverlay=pi3-miniuart-bt
+    dtoverlay=pi3-disable-bt
     ```
 
 * Update /boot/cmdline.txt file to use UART for shield. Delete ttyS0/ttyAMA0 text.
