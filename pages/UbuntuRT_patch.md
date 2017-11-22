@@ -43,7 +43,7 @@
     ```
     make menuconfig
     ```
-    Select Fully Preemtible Kernel otion  from 
+    Select Fully Preemtible Kernel option  from 
     1. Processor type and features
     2. Preemption Model (Voluntary Kernel Preemption (Desktop))
     3. Fully Preemptible Kernel (RT)  
@@ -61,8 +61,38 @@
     ```
     make
     ```
-    NOTE: You can use "make -jX"  option if you have thread support. X is number of core + 1. It will compile faster. For Virtual_Box use this.
+    NOTE: You can use "make -jX"  option if you have thread support. X is number of core + 1. It will compile faster. For VirtualBox use this.
     ```
     make -j2
     ```
-    Wait until compilation dones. It can take 3-4 hour. 
+    Wait until compilation done. It can take 3-4 hour on VirtualBox.
+
+8. Make modules and install
+    ```
+    sudo make modules_install -j2
+    sudo make install -j2
+    ``` 
+
+9. Check new kernel file and update grub boot loader to start Linux with new RT-Kernel.
+    ```
+    cd /boot
+    ls
+    ```
+    * You will see new kernel.
+    ![LS_GRUB](../resources/grub_ls.jpg)
+    * Now update grub and reboot machine.
+    ```
+    sudo update-grub
+    sudo reboot
+    ```
+
+10. Check kernel version to be sure.
+    ```
+    uname -a
+    ```
+* Old Kernel(Ubuntu SMP 4.10.0)
+![MenuConfig1](../resources/old_kernel.jpg)
+* New Kernel(PREEMPT RT 4.13.15)
+![MenuConfig1](../resources/new_rt_kernel.jpg)
+
+
