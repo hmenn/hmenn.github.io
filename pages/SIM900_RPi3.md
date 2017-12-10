@@ -26,7 +26,8 @@
     New
     ```
     dwc_otg.lpm_enable=0  console=tty1 console=serial0,115200 root=PARTUUID...
-
+    ```
+    
 * Connect RPi RX/TX to Shield RX/TX and enable HW Serial from Shield  
      <img src="../resources/SIM900.jpg" width="400"/>
 * Run the source code
