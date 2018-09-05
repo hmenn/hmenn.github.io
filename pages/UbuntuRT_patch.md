@@ -38,6 +38,7 @@
     ```
     sudo apt-get install libncurses5-dev
     sudo apt-get install libssl-dev
+    sudo apt-get install libelf-dev
     ```
 6. Configure Makefile before compiling kernel. This configure will open Real time preemt options.
     ```
